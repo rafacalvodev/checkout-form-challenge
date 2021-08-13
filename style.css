@@ -124,7 +124,6 @@ input[type='checkbox'] {
 }
 
 button[type='submit'] {
-  wudth: 20.75rem;
   border: none;
   padding: 2.125rem 5.625rem;
   font-size: 2rem;
@@ -132,6 +131,14 @@ button[type='submit'] {
   color: #fff;
   border-radius: var(--main-radius);
   grid-area: submit;
+}
+
+button[type='submit']:hover {
+  background: rgba(242, 153, 74, 0.8);
+}
+
+button {
+  cursor: pointer;
 }
 
 section {
@@ -143,7 +150,7 @@ select {
 }
 
 .container {
-  width: clamp(16rem, 93vw, 75rem);
+  width: clamp(16rem, 93vw, 100rem);
   margin: 0 auto;
 }
 
@@ -357,4 +364,22 @@ footer p {
 
 footer a:first-child {
   text-decoration: underline;
+}
+
+@media only screen and (min-width: 769px) {
+  .checkout {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  .single-product {
+    justify-content: space-between;
+  }
+
+  .single-product img {
+    width: auto;
+  }
 }
