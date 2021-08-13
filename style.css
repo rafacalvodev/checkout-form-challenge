@@ -180,14 +180,14 @@ select {
 }
 
 .single-product img {
-  width: 50%;
+  width: auto;
   height: 15.5rem;
   border-radius: var(--main-radius);
 }
 
 .product-info {
   margin-left: 3rem;
-  width: 50%;
+  width: auto;
   height: 100%;
   align-self: flex-start;
   display: flex;
@@ -336,10 +336,6 @@ select {
   grid-area: confirm;
 }
 
-/* .submit {
-  grid-area: submit;
-} */
-
 .shipping-forms {
   width: 100%;
   display: grid;
@@ -366,18 +362,31 @@ footer a:first-child {
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 739px) {
+  .input-field {
+    padding: 1.25rem 2rem 1.25rem 4rem;
+  }
+
+  .country svg,
+  .postal svg {
+    left: 6%;
+  }
+
+  .postal .input-field {
+    padding-left: 4rem;
+  }
+
   .checkout {
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
     align-items: flex-start;
     gap: 4rem;
   }
 
-  .single-product {
+  /* .single-product {
     justify-content: space-between;
-  }
+  } */
 
   .single-product img {
     width: auto;
