@@ -31,15 +31,15 @@
     <title>Checkout Form Challenge</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <div class="container">
-      <h1>Checkout</h1>
-      <section class="checkout">
-        <div class="forms">
-          <div class="contact">
-            <h3>Contact information</h3>
-            <div class="input-icons email">
-              <label for="email">Email</label>
+  <body class="container">
+    <h1>Checkout</h1>
+    <section class="checkout">
+      <div class="forms">
+        <div class="contact">
+          <h2>Contact information</h2>
+          <div class="single-form email">
+            <label for="email">Email</label>
+            <div class="input-icons">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -62,8 +62,10 @@
                 required
               />
             </div>
-            <div class="input-icons phone">
-              <label for="email">Phone</label>
+          </div>
+          <div class="single-form phone">
+            <label for="email">Phone</label>
+            <div class="input-icons">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="24px"
@@ -87,11 +89,13 @@
               />
             </div>
           </div>
-          <div class="shipping">
-            <h3>Shipping address</h3>
-            <div class="shipping-forms">
-              <div class="input-icons name">
-                <label for="fname">Full name</label>
+        </div>
+        <div class="shipping">
+          <h2>Shipping address</h2>
+          <div class="shipping-forms">
+            <div class="single-form name">
+              <label for="fname">Full name</label>
+              <div class="input-icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -114,8 +118,10 @@
                   required
                 />
               </div>
-              <div class="input-icons address">
-                <label for="adr">Address</label>
+            </div>
+            <div class="single-form address">
+              <label for="adr">Address</label>
+              <div class="input-icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -136,8 +142,10 @@
                   required
                 />
               </div>
-              <div class="input-icons city">
-                <label for="city">City</label>
+            </div>
+            <div class="single-form city">
+              <label for="city">City</label>
+              <div class="input-icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -159,8 +167,10 @@
                   required
                 />
               </div>
-              <div class="input-icons country">
-                <label for="country">Country</label>
+            </div>
+            <div class="single-form country">
+              <label for="country">Country</label>
+              <div class="input-icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -498,8 +508,10 @@
                   <option value="Zimbabwe">Zimbabwe</option>
                 </select>
               </div>
-              <div class="input-icons postal">
-                <label for="zip">Postal code</label>
+            </div>
+            <div class="single-form postal">
+              <label for="zip">Postal code</label>
+              <div class="input-icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -516,54 +528,81 @@
                 <input
                   type="text"
                   id="zip"
+                  class="input-field"
                   name="zip"
                   placeholder="Your postal code..."
                   pattern="\d*"
                 />
               </div>
-              <div class="confirm">
-                <input type="radio" id="confirm" name="confirm" value="mail" />
-                <label for="confirm">Save this information for next time</label>
-              </div>
-              <div class="submit">
-                <button type="submit">Continue</button>
-              </div>
+            </div>
+            <div class="confirm">
+              <input type="checkbox" id="confirm" name="confirm" />
+              <label for="confirm">Save this information for next time</label>
+            </div>
+            <button type="submit">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="products">
+        <div class="single-product">
+          <img src="/img/photo1.png" alt="Product 1 picture" />
+          <div class="product-info">
+            <a href="#">Vintage Backbag</a>
+            <div class="price">
+              <span class="current-price">$54.99</span>
+              <span class="old-price">$94.99</span>
+            </div>
+            <div class="quantity">
+              <button>-</button>
+              <span class="item">1</span>
+              <button>+</button>
             </div>
           </div>
         </div>
-        <div class="products">
-          <div class="single-product">
-            <img src="/img/photo1.png" alt="Product 1 picture" />
-            <div class="product-inf">
-              <p>Vintage Backbag</p>
-              <div class="price">
-                <span class="current-price">$54.99</span>
-                <span class="old-price">$94.99</span>
-              </div>
-              <div class="quantity">
-                <button>-</button>
-                <span class="item">1</span>
-                <button>+</button>
-              </div>
+        <div class="single-product">
+          <img src="/img/photo1.png" alt="Product 1 picture" />
+          <div class="product-info">
+            <a href="#">Levi shoes</a>
+            <div class="price">
+              <span class="current-price">$74.99</span>
+              <span class="old-price">$124.99</span>
             </div>
-          </div>
-          <div class="single-product">
-            <img src="/img/photo1.png" alt="Product 1 picture" />
-            <div class="product-inf">
-              <p>Vintage Backbag</p>
-              <div class="price">
-                <span class="current-price">$54.99</span>
-                <span class="old-price">$94.99</span>
-              </div>
-              <div class="quantity">
-                <button>-</button>
-                <span class="item">1</span>
-                <button>+</button>
-              </div>
+            <div class="quantity">
+              <button>-</button>
+              <span class="item">1</span>
+              <button>+</button>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+        <div class="full-total">
+          <div class="shipping-price">
+            <p>Shipping</p>
+            <span>$19</span>
+          </div>
+          <div class="total">
+            <p>Total</p>
+            <span>$148.98</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="attribution">
+      <p>
+        Created by
+        <a
+          href="https://rafacalvo.me/es-es/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Rafael Calvo</a
+        >
+        -
+        <a
+          href="https://devchallenges.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          >devChallenges.io</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
